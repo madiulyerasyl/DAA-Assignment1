@@ -47,7 +47,7 @@ public class QuickSort {
             }
         }
     }
-    private static int[] partition(int[] a, int left, int right,
+    static int[] partition(int[] a, int left, int right,
                                    Metrics metrics) {
 
         int pivotIndex = left + random.nextInt(right - left + 1);

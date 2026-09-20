@@ -5,22 +5,17 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        int[] numbers = {
-                1, 2, 3, 4, 5,
-                6, 7, 8, 9, 10,
-                11, 12, 13, 14, 15,
-                16, 17, 18, 19, 20
-        };
+        int[] numbers = {8, 2, 5, 1, 9, 3, 7, 4, 6};
 
         Metrics metrics = new Metrics();
 
-        System.out.println("Before: " + Arrays.toString(numbers));
+        int k = 4;
 
-        QuickSort.sort(numbers, metrics);
+        int result = QuickSelect.select(numbers, k, metrics);
 
-        System.out.println("After:  " + Arrays.toString(numbers));
+        System.out.println("k = " + k);
+        System.out.println("k-th smallest = " + result);
         System.out.println("Comparisons: " + metrics.comparisons);
-        System.out.println("Max depth: " + metrics.maxDepth);
         System.out.println("Time: " + metrics.getTimeMs() + " ms");
     }
 }
